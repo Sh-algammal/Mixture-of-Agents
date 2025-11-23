@@ -2,7 +2,7 @@
 
 This repository contains a **Streamlit-based AI agent application** that sends your query to multiple LLMs through the **Hugging Face Inference Router**, then aggregates the responses into one final answer.
 
-هذا الملف يشرح بالتفصيل كيفية تشغيل المشروع على أي جهاز، ويعالج الأخطاء الشائعة بالكامل.
+This README provides clear, structured instructions to help any user install, configure, and run the project smoothly.
 
 ---
 
@@ -10,59 +10,60 @@ This repository contains a **Streamlit-based AI agent application** that sends y
 
 ## **1. Python Version (IMPORTANT)**
 
-* المشروع **لا يعمل** على Python **3.13 أو 3.14**.
-* **يجب** استخدام:
+This project **does not work** on Python **3.13 or 3.14**.
+You must use one of the supported versions:
 
-  * ✔ Python **3.11** (مُوصى به بقوة)
-  * أو Python **3.10**
+* ✔ **Python 3.11** (strongly recommended)
+* ✔ Python 3.10
 
-> **Note:** لو جهازك مثبت عليه Python 3.13 أو 3.14، لازم تثبت Python 3.11 قبل تشغيل المشروع.
+> If your device already has Python 3.13 or 3.14 installed, you **must** download Python 3.11 to run this project.
 
-Download Python 3.11 from:
+Download Python 3.11:
 [https://www.python.org/downloads/release/python-3119/](https://www.python.org/downloads/release/python-3119/)
 
 ---
 
 ## **2. Required Python Libraries**
 
-يتم تثبيت جميع المكتبات عبر ملف `requirements.txt` الموجود في هذا المشروع.
+All dependencies are installed via the `requirements.txt` file.
 
-تشمل أهم المكتبات:
+Main libraries used:
 
-* streamlit
-* openai
-* pandas
-* pyarrow
-* asyncio
+* **streamlit** – Web UI framework
+* **openai** – API client for HuggingFace Inference Router
+* **pandas** – Data handling
+* **pyarrow** – Required backend dependency
+* **asyncio** – Async execution
 
 ---
 
 ## **3. Other Requirements**
 
-* اتصال إنترنت جيد.
-* **Hugging Face Access Token** (مطلوب لتشغيل النماذج).
-  يمكن الحصول على التوكن عبر:
-  [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
+* A stable internet connection
+* Your **Hugging Face Access Token**
+
+Create a token here:
+[https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
 
 ---
 
 # 🚀 Installation
 
-## **Step 1 – Clone Repository**
+## **Step 1 – Clone the Repository**
 
 ```
 git clone <repo-url>
 cd mixture-of-agents
 ```
 
-## **Step 2 – Create Virtual Environment**
+## **Step 2 – Create a Virtual Environment**
 
 ```
 py -3.11 -m venv venv
 venv\Scripts\activate
 ```
 
-## **Step 3 – Install Requirements**
+## **Step 3 – Install Dependencies**
 
 ```
 pip install -r requirements.txt
@@ -70,13 +71,13 @@ pip install -r requirements.txt
 
 ---
 
-# ▶️ Run the Application
+# ▶️ Running the Application
 
 ```
 streamlit run mixture-of-agents.py
 ```
 
-سيظهر التطبيق على الرابط:
+The app will open automatically at:
 
 ```
 http://localhost:8501
@@ -86,37 +87,37 @@ http://localhost:8501
 
 # 📝 Usage Guide
 
-1. أدخل **Hugging Face Access Token**.
-2. اكتب السؤال.
-3. اضغط **Get Answer**.
-4. التطبيق سيقوم بـ:
+1. Enter your **Hugging Face Access Token**.
+2. Type your question in the input field.
+3. Click **Get Answer**.
+4. The system will:
 
-   * إرسال السؤال لعدة نماذج.
-   * جمع الردود.
-   * عرض الإجابة النهائية.
+   * Query multiple LLMs.
+   * Collect individual responses.
+   * Generate one final aggregated answer.
 
 ---
 
-# ⚠️ Common Errors & Fixes
+# ⚠️ Common Errors & Solutions
 
-## ❌ **1. Python 3.13 أو 3.14 Error**
+## ❌ **1. Python 3.13 or 3.14 Error**
 
 ```
 Failed building wheel for pyarrow
 No matching distribution for pandas
 ```
 
-**الحل:** استخدم Python 3.11 فقط.
+**Solution:** Install Python **3.11**.
 
 ---
 
-## ❌ **2. ModuleNotFoundError**
+## ❌ ModuleNotFoundError
 
 ```
 No module named streamlit
 ```
 
-**الحل:**
+**Solution:**
 
 ```
 pip install streamlit
@@ -124,15 +125,15 @@ pip install streamlit
 
 ---
 
-## ❌ **3. Token Permission Error**
+## ❌ Token Permission Error
 
-إذا ظهرت مشكلة في الموديلات:
+If models fail to respond:
 
-* تأكد أن التوكن يحتوي على صلاحيات **read**.
+* Ensure your token has **read** permissions.
 
 ---
 
-# 📦 File Structure
+# 📦 Project Structure
 
 ```
 mixture-of-agents/
@@ -145,22 +146,22 @@ mixture-of-agents/
 
 ---
 
-# 🌐 About This Project
+# 🌐 Project Overview
 
-This app demonstrates a simple **Mixture-of-Agents architecture** using:
+This application implements a simple **Mixture-of-Agents** workflow using:
 
 * HuggingFace Inference Router
-* Multiple LLM models
-* Async requests
-* Final response aggregation
+* Multiple LLM sources
+* Asynchronous model requests
+* A final aggregator model
 
 ---
 
-# **🙋‍♂** Support
+# 🙋 Support
 
-لو واجهت أي مشكلة:
+If you face issues:
 
-* افتح Issue على GitHub
-* أو تواصل معي مباشرة
+* Open an Issue on GitHub
+* Or contact me directly
 
-Enjoy coding! 🚀
+Happy coding! 🚀
