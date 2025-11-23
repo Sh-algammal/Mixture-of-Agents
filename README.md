@@ -157,7 +157,7 @@ This application implements a simple **Mixture-of-Agents** workflow using:
 
 ---
 
-# 🙋 Support
+# 🙋‍♂ Support
 
 If you face issues:
 
