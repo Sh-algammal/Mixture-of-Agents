@@ -52,7 +52,7 @@ Create a token here:
 ## **Step 1 – Clone the Repository**
 
 ```
-git clone <repo-url>
+git clone <https://github.com/Sh-algammal/Mixture-of-Agents>
 cd mixture-of-agents
 ```
 
